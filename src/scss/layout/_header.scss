@@ -1,0 +1,112 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    @include m.mobile{
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 12.1rem 2fr;
+        gap: 3rem;
+    }
+
+    #menuMobile{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-top: 27.5rem;
+        padding: 2vh;
+        width: 85vh;
+        background-color: v.$darkViolet;
+        border-radius: 2rem;
+        // center div
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        a{
+            font-size: 2.4rem;
+            color: #fff;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .login{
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid v.$gray;
+            a{
+                &:last-of-type{
+                    background-color: v.$cyan;
+                    border-radius: 5rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+        }
+    }
+}
+
+#burger-menu{
+    display: inline-block;
+    width: 3rem;
+    position: relative;
+    z-index: 2;
+    @include m.mobile{
+        display: none;
+    }
+
+    .lines{
+        display: block;
+        margin-top: .7rem;
+        min-width: 100%;
+        height: .3rem;
+        background-color: v.$grayishViolet;
+        &:first-of-type{
+            margin-top: 0;
+        }
+    }
+}
+
+.desktop{
+    display: none;
+    @include m.mobile{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #menuDesktop{
+            display: inherit;
+            gap: 3rem;
+            a{
+                color: v.$grayishViolet;
+                padding: 1rem;
+                
+            }
+        }
+        
+        .login{
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            a{
+                color: v.$grayishViolet;
+                padding: 1rem;
+                &:last-of-type{
+                    padding: 1rem 2rem;
+                    background-color: v.$cyan;
+                    border-radius: 5rem;
+                    color: #fff;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: lighten(v.$cyan, 20);
+                    }
+                }
+            }
+        }
+
+    }
+}

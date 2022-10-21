@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.boost{
+    text-align: center;
+    padding: 8rem;
+    background-color: v.$darkViolet;
+    background-image: url(../../images/bg-boost-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    h2{
+        color: #fff;
+        margin-top: 2rem;
+    }
+}

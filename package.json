@@ -1,0 +1,39 @@
+{
+  "name": "url-shortening-api-master",
+  "version": "1.0.0",
+  "description": "Frontend Challenge with API",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "gulp dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roonder/url-shortening-API.git"
+  },
+  "keywords": [
+    "SASS",
+    "API",
+    "FetchAPI",
+    "Gulp",
+    "Node.js",
+    "JavaScript"
+  ],
+  "author": "Roonder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roonder/url-shortening-API/issues"
+  },
+  "homepage": "https://github.com/Roonder/url-shortening-API#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "cssnano": "^5.1.13",
+    "gulp": "^4.0.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser-js": "^5.2.2",
+    "sass": "^1.55.0"
+  }
+}

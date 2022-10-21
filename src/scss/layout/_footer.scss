@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: v.$veryDarkViolet;
+    color: #fff;
+    &__logo{
+        margin: 2rem;
+        path{
+            fill: #fff;
+        }  
+    } 
+
+    @include m.mobile{
+        display: flex;
+        justify-content: space-between;
+        padding: 4rem;
+    }
+
+    .resources,
+    .features,
+    .company{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        h4{
+            margin-top: 4rem;
+        }
+        a{
+            color: v.$gray;
+        }
+        @include m.mobile{
+            gap: 2rem;
+        }
+    }
+
+    .social-media{
+        margin-top: 4rem;
+        a{
+            color: #fff;
+            font-size: 2.4rem;
+            margin-right: 2.2rem;
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+}
